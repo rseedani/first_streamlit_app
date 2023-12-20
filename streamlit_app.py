@@ -2,4 +2,7 @@ import streamlit
 
 streamlit.title("My parents new healthy")
 
-print("Breakfast Items")
+streamlit.header("Breakfast Items")
+
+streamlit.text("Spinach omelet")
+
