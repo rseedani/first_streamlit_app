@@ -23,6 +23,8 @@ streamlit.multiselect("Pick some fruits:", list(fruit_list.index))
 #displaying the table
 streamlit.dataframe(my_fruit_list)
 
-fruits_selected = streamlit.multiselect("Pick some fruits: ", list(my_fruit_list.index), ['Avocado','Strawberries']
-fruits_to_show = my_fruit_list.loc[fruits_selected]
-streamlit.datafram(fruits_showing)
+
+#new section to display fruitvice api response
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
